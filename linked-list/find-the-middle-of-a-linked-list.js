@@ -9,41 +9,7 @@
 // Input: [1,2,3,4,5,6]
 // Output: 4
 
-class ListNode {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-}
-
-class LinkedList {
-    constructor() {
-        this.head = null;
-    }
-
-    append(value) {
-        const newNode = new ListNode(value);
-        if (!this.head) {
-            this.head = newNode;
-            return;
-        }
-        let current = this.head;
-        while (current.next) {
-            current = current.next;
-        }
-        current.next = newNode;
-    }
-
-    print() {
-        let current = this.head;
-        const values = [];
-        while (current) {
-            values.push(current.value);
-            current = current.next;
-        }
-        console.log(values.join(" -> "));
-    }
-}
+const LinkedList = require("./linked-list");
 
 class Solution {
     /**
@@ -63,11 +29,7 @@ class Solution {
 }
 
 const list = new LinkedList();
-list.append(1);
-list.append(2);
-list.append(3);
-list.append(4);
-// list.append(5);
+list.fromArray([1, 2, 3, 4, 5]);
 list.print();
 
 const solution = new Solution();
