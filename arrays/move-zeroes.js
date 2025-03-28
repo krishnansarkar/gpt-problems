@@ -33,6 +33,9 @@ class Solution {
     }
 }
 
+// Time-complexity: O(n)
+// Space-complexity: O(1)
+
 const solution = new Solution();
 var input = [0, 1, 0, 3, 12];
 console.log(input);
