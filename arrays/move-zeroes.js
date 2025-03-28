@@ -17,10 +17,10 @@ class Solution {
     moveZeros(input) {
         var left = 0;
         var right = 1;
-        while (input[left] != 0 && right < input.length) {
-            left++;
-            right++;
-        }
+
+        while (input[left] != 0 && left + 1 < input.length) left++;
+        right = left + 1;
+
         while (right < input.length) {
             let rightNum = input[right];
             if (rightNum != 0) {
